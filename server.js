@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 // ─── CONEXIÓN AUTOMÁTICA A MONGODB ATLAS ─────────────
-const MONGO_URI = "mongodb+srv://marlonegr606_db_user:zkrTZ6hmYihPapul@cluster0.kuumsnp.mongodb.net/?appName=Cluster0";
+const MONGO_URI = "mongodb+srv://marlonegr606_db_user:Sensor2025@cluster0.kuumsnp.mongodb.net/?appName=Cluster0";
 const DB_NAME   = "sensor_db";
 const COL_NAME  = "lecturas";
 
