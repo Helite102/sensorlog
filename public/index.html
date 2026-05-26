@@ -198,7 +198,11 @@ let localHistory=[],sessionCount=0;
 let accelHistory=[],gyroHistory=[];
 const MAX=50;
 
-let config=JSON.parse(localStorage.getItem('slcfg')||'{}');
+const DEFAULT_CFG = {server:'https://sensorlog.onrender.com', device:'Mi Celular'};
+let config = Object.assign({}, DEFAULT_CFG, JSON.parse(localStorage.getItem('slcfg')||'{}'));
+// Si no hay servidor guardado, usar el default y guardarlo
+if(!config.server) config.server = DEFAULT_CFG.server;
+localStorage.setItem('slcfg', JSON.stringify(config));
 applyConfig();
 
 function applyConfig(){
